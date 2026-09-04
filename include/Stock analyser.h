@@ -12,7 +12,9 @@ class StockAnalyzer {
 private:
 
     vector<StockData> data;
+    string selectedSymbol;
 
+    vector<StockData> getSelectedData() const;
 
 public:
 
@@ -22,13 +24,25 @@ public:
     // Check if data is empty
     bool isEmpty() const;
 
-    // Number of records
+    // Get total number of records
     int getRecordCount() const;
 
-    // Get all closing prices
+    // Get available stock symbols
+    vector<string> getSymbols() const;
+
+    // Display available stocks
+    void displayAvailableStocks() const;
+
+    // Select a stock
+    bool selectStock(const string& symbol);
+
+    // Get currently selected stock
+    string getSelectedSymbol() const;
+
+    // Get closing prices of selected stock
     vector<double> getClosingPrices() const;
 
-    // Display stock data
+    // Display selected stock data
     void displayData() const;
 
     // Display complete analysis
