@@ -8,6 +8,7 @@ using namespace std;
 struct StockData {
 
     string date;
+    string symbol;
 
     double open;
     double high;
